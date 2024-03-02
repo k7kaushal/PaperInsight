@@ -1,0 +1,89 @@
+Electronic Reservation Slip (ERS)-Normal User
+
+
+
+
+
+Booked From                                            To
+
+PUNE JN - PUNE (PUNE)            PUNE JN (PUNE)            AHMEDABAD JN - ADI (AHMEDABAD)
+Start Date* 17-Feb-2024       Departure* 21:35 17-Feb-2024      Arrival* 06:25 18-Feb-2024
+N IFOOD CHARGES NOT INCLUDED
+PNR                      Train No./Name                     Class
+8313069563              12298 / ADI DURONTO             THIRD AC (3A)
+Quota                       Distance                     Booking Date
+GENERAL (GN)                        635 KM                     12-Jan-2024 12:03:03 HRS
+Passenger Details
+#  Name            Age    Gender     Booking Status            Current Status
+1. MANJUSHAKULKARNI    48     F      CNF/B7/51/UPPER          CNF /B7/51/UPPER
+2. SUNITA KHADTARE      48     F      CNF/B7/53/MIDDLE         CNF /B7/53/MIDDLE
+3. SMITA PIPADA        49     F      CNF/B7/54/UPPER          CNF /B7/54/UPPER
+4. SUVARNA MUNOT      51     F      CNF/B7/56/SIDE UPPER       CNF /B7/56/SIDE UPPER
+
+Acronyms:     RLWL: REMOTE LOCATION WAITLIST            PQWL: POOLED QUOTA WAITLIST             RSWL: ROAD-SIDE WAITLIST
+
+
+Transaction ID: 100004724777240
+IR recovers only 57% of cost of travel on an average.
+Payment Details
+Ticket Fare
+IRCTC Convenience Fee (Incl. of GST) Travel Insurance Premium (Incl. of GST) Total Fare (all inclusive)
+
+
+
+
+₹ 6,340.00
+₹ 23.60
+₹ 1.40
+₹ 6,365.00
+
+PG Charges as applicable (Additional)
+
+Beware of fraudulent customer care number. For any assistance, use only the IRCTC e-ticketing Customer care number:14646.
+IRCTC Convenience Fee is charged per e-ticket irrespective of number of passengers on the ticket.
+* The printed Departure and Arrival Times are liable to change. Please Check correct departure, arrival from Railway Station Enquiry or Dial 139 or SMS RAIL to 139.
+This ticket is booked on a personal User ID, its sale/purchase is an offence u/s 143 of the Railways Act,1989.
+Prescribed original ID proof is required while travelling along with SMS/ VRM/ ERS otherwise will be treated as without ticket and penalized as per Railway Rules.
+
+
+
+
+
+
+Indian Railways GST Details:
+Invoice Number:       PS24831306956311     Address:           Indian Railways New Delhi
+Supplier Information:
+SAC Code:          996421           GSTIN:            07AAAGM0289C1ZL
+Recipient Information:
+GSTIN:           NA
+Name:            NA             Address:
+Taxable Value:       6036
+
+CGST Rate:          2.5%             CGST Amount:        0.0
+SGST/UGST Rate:                     SGST/UGST Amount:
+IGST Rate:          5.0%             IGST Amount:        301.8
+Total Tax:         301.80
+Place of Supply: Maharashtra(27) State Name/Code of Supplier: Delhi/DL
+
+INSTRUCTIONS:
+1. Prescribed Original ID proofs are:- Voter Identity Card / Passport / PAN Card / Driving License / Photo ID card issued by Central / State Govt. / Public Sector Undertakings of State / Central Government ,District Administrations , Municipal bodies and Panchayat Administrations which are having serial number / Student Identity Card with photograph issued by recognized School or College for their students / Nationalized Bank Passbook with photograph /Credit Cards issued by Banks with laminated photograph/Unique Identification Card "Aadhaar", m-Aadhaar, e-Aadhaar. /Passenger showing the Aadhaar/Driving Licence from the "Issued Document" section by logging into his/her DigiLocker account considered as valid proof of identity. (Documents uploaded by the user i.e. the document in "Uploaded Document" section will not be considered as a valid proof of identity).
+2.  PNRs having fully waitlisted status will be dropped and automatic refund of the ticket amount after deducting the applicable CLERKAGE by Railway shall be credited to the account used for payment for booking of the ticket. Passengers having fully waitlisted e-ticket are not allowed to board the train. However, the names of PARTIALLY waitlisted/confirmed and RAC ticket passenger will appear in the chart.
+3.  Passengers travelling on a fully waitlisted e-ticket will be treated as Ticketless.
+4.  Obtain certificate from the TTE /Conductor in case of (a) PARTIALLY waitlisted e-ticket when LESS NO. OF PASSENGERS travel, (b)A.C FAILURE, (c)TRAVEL IN LOWER CLASS. This original certificate must be sent to GGM (IT), IRCTC, Internet Ticketing Centre, IRCA Building, State Entry Road, New Delhi-110055 after filing TDR online within prescribed time for claiming refund.
+5.  In case, on a party e-ticket or a family e-ticket issued for travel of more than one passenger, some passengers have confirmed reservation and others are on RAC or waiting list, full refund of fare, less clerkage, shall be admissible for confirmed passengers also subject to the condition that the ticket shall be cancelled online or online TDR shall be filed for all the passengers upto thirty minutes before the scheduled departure of the train.
+6.  In case train is late more than 3 hours, refund is admissible as per railway refund rules only when TDR is filed by the user before the actual departure of the train at boarding station and passenger has not travelled.
+7.  In case of train cancellation on its entire run, full refund is granted automatically by the system. However, if the train is cancelled partially on its run or diverted and not touching boarding/destination station, passengers are required to file online TDR within 72 hours of scheduled departure of the train from passengers boarding station.
+8. Never purchase e-ticket from unauthorized agents or persons using their personal IDs for commercial purposes. Such tickets are liable to be cancelled and forfeited without any refund of money, under section (143) of the Indian Railway Act 1989. List of authorized agents are available on www.irctc.co.in under 'Find NGet Agents' option.
+9.  For detail, Rules, Refund rules, Terms & Conditions of E-Ticketing services, Travel Insurance facility etc. Please visit www.irctc.co.in
+10. While booking this ticket, you have agreed of having read the Health Protocol of Destination State of your travel. You are again advised to clearly read the Health Protocol advisory of destination state before start of your travel and follow them properly.
+11. The FIR forms are available with on board ticket checking staff, train guard and train escorting RPF/GRP staff.
+12. Variety of meals available in more than 1500 trains. For delivery of meal of your choice on your seat log on to www.ecatering.irctc.co.in or call 1323 Toll Free. For any suggestions/complaints related to Catering services, contact Toll Free No. 1800-111-321 (07.00 hrs to 22.00 hrs)
+13. National Consumer Helpline (NCH) Toll Free Number: 1800-11-400 or 14404
+14. You can book unreserved ticket from UTS APP or ATVMs (Automatic Ticket Vending Machines) located in Railway Stations.
+
+Customer Care:
+
+For e-ticket booking, cancellation and refund assistance, please contact us at 14646 or mail us at care@irctc.co.in. For Railway Enquiry, please contact us at 139 or SMS RAIL to 139.
+For e-catering, to book and get food delivered on your train berth, please contact us at 1323 (24*7 Hrs Toll Free) or log on to www.ecatering.irctc.co.in.
+
+Print ERS Without Advertisements [X]
