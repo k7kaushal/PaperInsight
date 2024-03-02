@@ -1,0 +1,11 @@
+langchain
+python-dotenv
+tiktoken
+faiss-cpu
+protobuf
+google-generativeai
+langchain_experimental
+sentence-transformers
+chromadb
+PyPDF2
+tika
