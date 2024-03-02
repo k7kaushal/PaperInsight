@@ -1,5 +1,5 @@
 # PaperInsight
-Problem Statement : Chat with any scientific document
+Problem Statement : Chat with any scientific document <br></br>
 Document format supported : .pdf , .pptx, .docx, .txt
 
 ![image](https://github.com/k7kaushal/PaperInsight/assets/82771451/c3bcd715-9731-418f-a65f-c8dc8cad6221)
