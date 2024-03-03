@@ -1,0 +1,223 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+      #tsparticles {
+         width: 100%;
+         height: 100%;
+      }
+   </style>
+    <script src="https://kit.fontawesome.com/fac6ba7a30.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaperInsight</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<style>
+    .main{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .left-side{
+        background-color: #344955;
+        padding: 50px !important;
+        color: white;
+        text-align: center;
+        border-radius: 20px;
+    }
+    .right-side{
+        background-color: #50727B;
+        padding: 50px !important;
+        color: white;
+        border-radius: 20px;
+    }
+    .upload-area__drop-zoon{
+        background-color: #50727B !important;
+        border-radius: 20px;
+        padding: 20px;
+    }
+    .boxes{
+        margin-bottom:5px;
+        background-color: #50727B;
+        padding: 20px !important;
+        color: white;
+        border-radius: 20px;
+    }
+    .body{
+        background-color: #35374B;
+    }
+</style>
+<body class="body">
+    <div class="container main">
+        <div class="row">
+        <div class="col-md-5 col-12 left-side">
+            <div id="progress_div" class="form-group d-none">
+                <div class="progress">
+                    <div id="progress_bar" class="progress-bar progress-bar-striped" role="progressbar"
+                        style="width: 100%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+            <form id="upload-form" method="POST" enctype="multipart/form-data" style="display:flex;justify-content:center;align-items:center;flex-direction:column;">
+                {% csrf_token %}
+                <div class="center-form" style="width:100%">
+                  
+                    <div id="uploadArea" class="upload-area">
+                      <p class="drop-zoon__paragraph">Drop your file here or Click to browse</p>
+                      <div id="dropZoon" class="upload-area__drop-zoon drop-zoon" style="background:url({% static 'img/upload.png' %}) no-repeat top;background-position-y:20px;">
+                        <input id="document" class="drop-zoon__file-input" style= "border-radius:12px;padding-top:5rem !important;" type="file" name="document"
+                          accept="application/pdf, application/vnd.ms-powerpoint, application/vnd.openxmlformats-officedocument.presentationml.presentation, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                          required />
+                        </div>
+                        <button class="btn btn-dark" style="margin-top: 25px !important;margin-bottom: 0px !important;"id="uploadButton" type="submit" name="upload">
+                          Upload
+                        </button>
+                        <br><br><br>
+                        <h5 id = 'uploaded-file'>File for conversation: {{ file }}</h5>
+                      </div>
+                </div><br>
+                <p><b>Try asking these questions...</b></p>
+                <div class="row">
+                    <div class="col-md-5 col-12 boxes">
+                        <i class="fa-solid fa-star"></i>
+                        <button class="btn" style="background-color: transparent; color: white;" id="question1" onclick="scrollToQuestion(1)">
+                            Summarize the paper
+                        </button>
+                    </div>
+                    <div class="col-md-2 col-12"></div>
+                    <div class="col-md-5 col-12 boxes">
+                        <i class="fa-solid fa-star"></i>
+                        <button class="btn" style="background-color: transparent; color: white;" id="question2" onclick="scrollToQuestion(2)">
+                            Tell me about the algorithm used
+                        </button>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-md-5 col-12 boxes">
+                        <i class="fa-solid fa-star"></i>
+                        <button class="btn" style="background-color: transparent; color: white;" id="question3" onclick="scrollToQuestion(3)">
+                            What are the practical implications of this research?
+                        </button>
+                    </div>
+                    <div class="col-md-2 col-12"></div>
+                    <div class="col-md-5 col-12 boxes">
+                        <i class="fa-solid fa-star"></i>
+                        <button class="btn" style="background-color: transparent; color: white;" id="question4" onclick="scrollToQuestion(4)">
+                            What are the results of this research paper?
+                        </button>
+                    </div>
+                </div>
+                <p class="text-danger mx-3" id="uploadErrorMessage"></p>
+              </form>
+        </div>
+        <div class="col-md-1 col-12"></div>
+        <div class="col-md-6 col-12 right-side">
+            <div class="mb-3">
+                <form method="POST" name="chat">
+                    {% csrf_token %}
+                    <label for="exampleFormControlTextarea1" class="form-label"><b>Ask a question...</b></label>
+                    <textarea class="form-control" id="question-asking-bar" name="message" rows="3">{{ que }}</textarea><br>
+                    <button type="submit" id="submitButton" style="text-align: right;" class="btn btn-dark mb-3"><b>Send <i class="fa-solid fa-arrow-right"></i></b></button>
+                    <br><br>
+                    <input type="hidden" value="{{file}}" name="file">
+                    <textarea class="form-control" id="outputText" rows="20" name="outputText1">{{ output }}</textarea><br>
+                    <button class="btn btn-dark" id="" name="visualize">
+                        Visualize insights
+                    </button>
+                </form>     
+                <img src="data:image/png;base64,{{ plot_base64 }}" alt="Plot">
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        // particlesJS('snowflakes.json');
+        tsParticles.load("particles", {
+           particles: {
+              number: {
+                 value: 1000
+              },
+              move: {
+                 enable: true
+              },
+              color: {
+                 value: "#272701"
+              },
+           }
+        });
+     </script>
+    <script>
+
+        function scrollToQuestion(x) {
+          var questionAskingBar = document.getElementById('question-asking-bar');
+          var question = document.getElementById('question'+x).innerText;
+          questionAskingBar.innerText = question
+          questionAskingBar.scrollIntoView({ behavior: 'smooth' });
+      }
+      </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <script>
+        let uploadButton = document.getElementById("uploadButton");
+        if (uploadButton) {
+            let validExtension = [".docx", ".pdf", ".ppt", ".tex"];
+            uploadButton.addEventListener('click', (e)=>{
+                let name =document.getElementById("document");
+                let fileSize = name.files.item(0).size/1024/1024;
+                let fileName = name.files.item(0).name;
+                if(fileSize  > 1024){
+                    document.getElementById('uploadErrorMessage').innerText="Please upload file size less than 1024 MB";
+                    e.preventDefault();
+                }else{
+                    document.getElementById('uploadErrorMessage').innerText="";
+                }
+            })
+        }
+        $("#upload-form").submit(function (e) {
+                e.preventDefault();
+
+                const formData = new FormData();
+                const documentName = document.getElementById("document").files[0];
+                formData.append("document", documentName);
+                file = documentName.name;
+                let extension = file.substring(file.lastIndexOf('.') + 1);
+                //remove the progress bar of generating dict-order
+                const progress_wrapper_id = document.getElementById("progress-wrapper-id");
+                progress_wrapper_id.classList.add("d-none");
+
+                    result.classList.add("d-none");
+                    const xhr = new XMLHttpRequest();
+                    xhr.responseType = 'json';
+                    xhr.open("POST", "/udaan/upload/", true);
+                    xhr.setRequestHeader("X-CSRFToken", csrf_token);
+                    let uploaded = "";
+                    const progress_div = document.getElementById("progress_div");
+                    const progress_bar = document.getElementById("progress_bar");
+
+                    const naiveRound = (num, decimalPlaces = 0) => {
+                        const p = Math.pow(10, decimalPlaces);
+                        return Math.round(num * p) / p;
+                    }
+                    
+                    xhr.upload.addEventListener("progress", (event) => {
+                        if (event.lengthComputable) {
+                            let percentage = ((event.loaded) / (event.total) * 100 | 0);
+                            progress_div.classList.remove("d-none");
+                            progress_bar.style["width"] = "" + percentage + "%";
+                            progress_bar.innerHTML = "" + percentage + "%";
+                            uploaded = naiveRound((event.loaded / 1000000), 2) + "/" + naiveRound((event.total / 1000000), 2) + " MB";
+                        }
+                    })
+                    xhr.send(formData);
+            });
+
+            function removeFileExtension(fileName) {
+                var parts = fileName.split('.');
+                if (parts.length > 1) {
+                parts.pop();
+                }
+                var name = parts.join('.');
+                return name;
+            }
+      </script>
+</body>
+</html>
