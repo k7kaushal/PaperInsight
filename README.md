@@ -1,7 +1,7 @@
 ## PaperInsight : Chat with any scientific document
 
-### Problem Statement : Chat with any scientific document <br></br>
-### Document format supported : .pdf , .pptx, .docx, .txt <br></br>
+### Problem Statement : Chat with any scientific document 
+### Document format supported : .pdf , .pptx, .docx, .txt 
 ### Introduction : <br>
 > Documents are fundamental to research and professional 
 communication, but existing solutions primarily focus on parsing PDF 
@@ -35,8 +35,8 @@ Initial stage working demo: https://drive.google.com/file/d/1bZftENO0wlf9DJcHVDg
 
 ### Project setup
 
-> The first thing to do is to clone the repository: (https://github.com/k7kaushal/PaperInsight.git)
-> Install requirements using: 
+> The first thing to do is to clone the repository: (https://github.com/k7kaushal/PaperInsight.git) <br>
+> Install requirements using: <br>
 `pip install -r requirements.txt`
 > Once pip has finished installing the requirements:
 ```
@@ -45,6 +45,6 @@ python manage.py migrate
 python manage.py runserver
 ```
 > Optional :
-``` python manage.py createsuperuser ```
-Enter username, email address and password and login at http://127.0.0.1:8000/admin with these credentials for admin access.
+``` python manage.py createsuperuser ``` <br>
+Enter username, email address and password and login at http://127.0.0.1:8000/admin with these credentials for admin access. <br>
 > Navigate to http://127.0.0.1:8000/
