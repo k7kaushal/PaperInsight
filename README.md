@@ -48,3 +48,9 @@ python manage.py runserver
 ``` python manage.py createsuperuser ``` <br>
 Enter username, email address and password and login at http://127.0.0.1:8000/admin with these credentials for admin access. <br>
 > Navigate to http://127.0.0.1:8000/
+
+### Recognition: Mined hackathon hosted by Nirma University, Ahmedabad, Gujarat, India and sponsored by the Binghamton University
+First place winners Cactus track : ![image](https://github.com/k7kaushal/PaperInsight/assets/82771451/aceba115-af6c-4a5e-838e-2888c6824715) <br>
+Third place winners in Grand prize winners among all tracks: ![image](https://github.com/k7kaushal/PaperInsight/assets/82771451/672172bc-44cb-4d0c-bd4a-604bb000b470)
+
+
