@@ -47,7 +47,7 @@ python manage.py runserver
 > Optional :
 ``` python manage.py createsuperuser ``` <br>
 Enter username, email address and password and login at http://127.0.0.1:8000/admin with these credentials for admin access. <br>
-> Navigate to http://127.0.0.1:8000/
+> Navigate to http://127.0.0.1:8000/upload 
 
 ### Recognition: Mined hackathon hosted by Nirma University, Ahmedabad, Gujarat, India and sponsored by the Binghamton University
 First place winners in Cactus track <br>
