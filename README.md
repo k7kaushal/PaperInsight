@@ -45,7 +45,9 @@ python manage.py migrate
 python manage.py runserver
 ```
 > Create a folder named "output" in the root directory.
+
 > Generate api keys for genai and convert-api and add them in views.py
+
 > Optional :
 ``` python manage.py createsuperuser ``` <br>
 Enter username, email address and password and login at http://127.0.0.1:8000/admin with these credentials for admin access. <br>
